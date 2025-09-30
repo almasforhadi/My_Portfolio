@@ -181,7 +181,6 @@ nav .fa-xmark:hover {
   animation: fadeInLeft 1s;
 }
 
-/* Scrolling tagline */
 .scrolling-text {
   overflow: hidden;
   white-space: nowrap;
@@ -207,10 +206,19 @@ nav .fa-xmark:hover {
   }
 }
 
-.home-text h1 {
+/* .home-text h1 {
   font-size: 46px;
   line-height: 1.3;
   margin-bottom: 10px;
+} */
+.home-text h1 {
+  font-size: 52px;       
+  line-height: 1.4;     
+  margin: 20px 0;       
+  font-weight: 700;     
+  text-align: start;    
+  letter-spacing: 0.5px; 
+  word-spacing: 2px;   
 }
 
 .home-text h1 span {
@@ -221,6 +229,7 @@ nav .fa-xmark:hover {
 .sub-text {
   font-size: 18px;
   color: #ccc;
+  text-align: start;
   margin-bottom: 20px;
 }
 
@@ -528,14 +537,19 @@ nav .fa-xmark:hover {
   animation: fadeInDown 1s ease;
 }
 
-.about-col-2 p {
-  font-size: 18px;
-  color: white !important;
-  margin-bottom: 25px;
-  letter-spacing: 1px;
-  line-height: 1.5;
-  text-align: justify;
+ .about-col-2 p {
+  font-size: 19px;          
+  color: #ffffff !important;
+  margin-bottom: 28px;      
+  letter-spacing: 0.6px;    
+  line-height: 1.8;         
+  text-align: justify;      
+  font-weight: 400;        
+  font-family: 'Poppins', sans-serif;
+  
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
+
 .about-col-2 .tab_titles p {
   color: rgb(30, 144, 255) !important;
 
@@ -576,10 +590,25 @@ nav .fa-xmark:hover {
 
 .tab-contents ul li {
   list-style: none;
-  margin: 12px 0;
-  font-size: 18px;
-  color: #fff;
+  margin: 14px 0;             
+  font-size: 18px;           
+  color: #ffffff;            
+  letter-spacing: 0.5px;     
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif; 
+  padding-left: 28px;        
+  position: relative;         
 }
+
+/* stylish custom bullet */
+.tab-contents ul li::before {
+  content: "✔";                /* premium checkmark */
+  position: absolute;
+  left: 0;
+  color: #00c6ff;              /* stylish accent color */
+  font-weight: 600;
+}
+
 
 .tab-contents ul li span {
   color: #ffdd00 !important;
