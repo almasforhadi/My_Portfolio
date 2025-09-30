@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css"
+        integrity="sha512-WxpJXPm/Is1a/dzEdhdaoajpgizHQimaLGL/QqUIAjIihlQqlPQb1V9vkGs9+VzXD7rgI6O+UsSKl4u5K36Ydw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!---------------------------header------------------------------->
+    <div id="header">
+        <nav>
+            <img src="images/logo.png" class="logo dark-mode-toggle" alt="Logo">
+
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">My Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+
+            <!-- Download CV Button -->
+            <a href="files/resume.pdf" class="download-cv-btn" download>
+                <i class="fa-solid fa-download"></i> Download CV
+            </a>
+
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+        </nav>
+    </div>
+
+    <div id="home">
+        <div class="container">
+            <!-- Header Content -->
+            <div class="home-content">
+                <div class="home-text">
+                    <div class="scrolling-text">
+                        <span>Python Developer | Web Developer</span>
+                    </div>
+                    <h1>
+                        👋 Hello, I'm <span>Almas Forhadi</span><br>
+                        I craft <b>modern, scalable & impactful</b> digital solutions.
+                    </h1>
+                    <p class="sub-text">
+                        Specializing in <b>Django & Full-Stack Development</b> to deliver premium web experiences.
+                    </p>
+                    <button class="hire-btn" id="hireBtn">🚀 Hire Me</button>
+                </div>
+                <div class="home-img">
+                    <img src="images/my-img3.png" alt="Almas Forhadi">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------- Modal Popup ---------->
+    <div id="hireModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h2>Hire Me — Work With Almas</h2>
+            <p class="intro">Building fast, reliable, and user-focused applications with <b>Django, Python, and modern
+                    front-end</b>. Let’s collaborate!</p>
+
+            <div class="modal-actions">
+                <a href="files/resume.pdf" target="_blank" class="btn resume-btn">📄 View Resume</a>
+            </div>
+
+
+            <form action="https://formspree.io/f/xwprevjw" method="POST">
+                <label class="input-group">
+                    Your name:
+                    <input type="name" name="name" required>
+                </label>
+                <label class="input-group">
+                    Email:
+                    <input type="email" name="email" required>
+                </label>
+                <label class="input-group">
+                    Message:
+                    <textarea name="message" required></textarea>
+                </label>
+                <button class='submit-btn' type="submit">Send</button>
+            </form>
+
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/almas-forhadi1999">LinkedIn</a> | <a
+                    href="https://github.com/almasforhadi/">GitHub</a> | <a
+                    href="https://www.facebook.com/mdalmasforhadi.forhadi">Facebook</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-------------------------About---------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/my-img2.jpeg" alt="Almas Forhadi">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p class="description">
+                        With a strong foundation in C and C++, I’ve developed deep expertise in Data Structures &
+                        Algorithms and transitioned into full-stack web development to build modern, responsive, and
+                        scalable applications.
+                        My core skill set includes HTML, CSS, Bootstrap, JavaScript, and Python (Django), with database
+                        proficiency in MySQL and PostgreSQL, complemented by tools like Git, GitHub, and Figma.
+                        Beyond development, I’m passionate about Mathematics and enjoy teaching and mentoring to share
+                        knowledge and inspire others.
+                    </p>
+
+                    <div class="tab_titles">
+                        <p class="tab_links active-link" onclick="openTab('skills', event)">Skills</p>
+                        <p class="tab_links" onclick="openTab('experience', event)">Experience</p>
+                        <p class="tab_links" onclick="openTab('education', event)">Education</p>
+                    </div>
+
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Full Stack Development</span><br>End-to-end web solutions with modern frontend &
+                                backend technologies.</li>
+                            <li><span>Frontend Development</span><br>Responsive UI with HTML, CSS, JavaScript, React.js.
+                            </li>
+                            <li><span>Backend Development</span><br>Secure and scalable apps with Python (Django).</li>
+                            <li><span>Database</span><br>Efficient data management with MySQL, PostgreSQL.</li>
+                            <li><span>REST API</span><br>Designing and integrating RESTful APIs.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>
+                                <span>2025</span><br>
+                                Developed <b>CapitalBank (Bank Management System)</b> with Python, Django & PostgreSQL.
+                            </li>
+                            <li>
+                                <span>2025</span><br>
+                                Built a <b>Library Management System</b> using Django & SQLite3.
+                            </li>
+                            <li>
+                                <span>2024</span><br>
+                                Created a responsive <b>Car Website</b> for managing car listings.
+                            </li>
+                            <li>
+                                <span>2023 - Current</span><br>
+                                Active in Competitive Programming (HackerRank, Codeforces, LeetCode, GFG).<br>
+                                🏆 Intra-University Contest Winner <br>
+                                🎯 ICPC Asia Dhaka Regional 2025 Participant
+                            </li>
+                            <li>
+                                <span>2021 - 2023</span><br>
+                                Tutored Higher Mathematics & ICT at the local level.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <span>2022 - Present</span><br>
+                                B.Sc. in Computer Science & Engineering (CSE)<br>
+                                <b>International Standard University (ISU), Dhaka</b><br>
+                                Currently in Final Year.
+                            </li>
+                            <li>
+                                <span>2023 - 2024</span><br>
+                                Software Development Course<br>
+                                <b>Phitron Platform</b>
+                            </li>
+                            <li>
+                                <span>2025 - Present</span><br>
+                                Full-Stack Development (Python Django & React)<br>
+                                <b>Ostad Platform</b>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------------Skills--------------------------------------->
+    <div id="skill">
+        <div class="container">
+            <h1 class="subtitle">Skills</h1>
+
+            <!-- Category Tags -->
+            <div class="skill-categories">
+                <span class="tag active" onclick="filterSkills('all', event)">All</span>
+                <span class="tag" onclick="filterSkills('frontend', event)">Frontend</span>
+                <span class="tag" onclick="filterSkills('backend', event)">Backend</span>
+                <span class="tag" onclick="filterSkills('language', event)">Languages</span>
+                <span class="tag" onclick="filterSkills('tools', event)">Tools</span>
+            </div>
+
+            <!-- Logo Slider -->
+            <div class="skill-logo-wrapper">
+                <div class="skill-logo scrolling">
+
+                    <!------------- Frontend ------------>
+                    <div class="item frontend">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/html-5.png" />
+                        <p>HTML</p>
+                        <div class="progress"><span style="width:95%"></span></div>
+                    </div>
+                    <div class="item frontend">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/css3.png" />
+                        <p>CSS</p>
+                        <div class="progress"><span style="width:90%"></span></div>
+                    </div>
+                    <div class="item frontend">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/javascript.png" />
+                        <p>JavaScript</p>
+                        <div class="progress"><span style="width:65%"></span></div>
+                    </div>
+                    <div class="item frontend">
+                        <img class="logo-icon" src="https://img.icons8.com/officel/96/react.png" />
+                        <p>React</p>
+                        <div class="progress"><span style="width:80%"></span></div>
+                    </div>
+                    <div class="item frontend">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/bootstrap.png" />
+                        <p>Bootstrap</p>
+                        <div class="progress"><span style="width:85%"></span></div>
+                    </div>
+
+                    <!----------- Backend -------------->
+                    <div class="item backend">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/python.png" />
+                        <p>Python</p>
+                        <div class="progress"><span style="width:70%"></span></div>
+                    </div>
+                    <div class="item backend">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/django.png" />
+                        <p>Django</p>
+                        <div class="progress"><span style="width:70%"></span></div>
+                    </div>
+                    <div class="item backend">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/mysql.png" />
+                        <p>MySQL</p>
+                        <div class="progress"><span style="width:70%"></span></div>
+                    </div>
+                    <div class="item backend">
+                        <img class="logo-icon"
+                            src="https://img.icons8.com/?size=100&id=38561&format=png&color=000000" />
+                        <p>PostgreSQL</p>
+                        <div class="progress"><span style="width:70%"></span></div>
+                    </div>
+
+                    <!--------------- Tools ------------------>
+                    <div class="item tools">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/git.png" />
+                        <p>Git</p>
+                        <div class="progress"><span style="width:75%"></span></div>
+                    </div>
+                    <div class="item tools">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/github.png" />
+                        <p>GitHub</p>
+                        <div class="progress"><span style="width:75%"></span></div>
+                    </div>
+                    <div class="item tools">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/figma.png" />
+                        <p>Figma</p>
+                        <div class="progress"><span style="width:65%"></span></div>
+                    </div>
+
+                    <!--------------Languages----------------->
+                    <div class="item language">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/c.png" />
+                        <p>C</p>
+                        <div class="progress"><span style="width:75%"></span></div>
+                    </div>
+                    <div class="item language">
+                        <img class="logo-icon" src="https://isocpp.org/files/img/cpp_logo.png" />
+                        <p>C++</p>
+                        <div class="progress"><span style="width:75%"></span></div>
+                    </div>
+                    <div class="item language">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/javascript.png" />
+                        <p>JavaScript</p>
+                        <div class="progress"><span style="width:75%"></span></div>
+                    </div>
+                    <div class="item language">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/python.png" />
+                        <p>Python</p>
+                        <div class="progress"><span style="width:75%"></span></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ------------------  Services ------------------------------>
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+
+            <div class="services-list">
+                <div class="service-card" data-animate>
+                    <div class="icon-box">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h2>Web Design</h2>
+                    <p>
+                        Modern and responsive web design using HTML, CSS, JS & bootstrap frameworks to
+                        deliver smooth, beautiful websites.
+                    </p>
+                    <a href="https://www.w3schools.com/html/" target="_blank">Learn More <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card" data-animate>
+                    <div class="icon-box">
+                        <i class="fa-solid fa-crop-simple"></i>
+                    </div>
+                    <h2>REST API</h2>
+                    <p>
+                        Robust and scalable REST APIs built with Django, enabling seamless communication between the
+                        backend and frontend, and allowing clients to securely create, read, update, and delete data.
+                    </p>
+                    <a href="https://www.django-rest-framework.org/" target="_blank">Learn More <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card" data-animate>
+                    <div class="icon-box">
+                        <i class="fa-brands fa-app-store"></i>
+                    </div>
+                    <h2>Web Development</h2>
+                    <p>
+                        Dynamic and user-friendly web applications built with Django & Python for the backend,
+                        and HTML, CSS, JavaScript, and Bootstrap for the frontend.
+                    </p>
+                    <a href="https://www.djangoproject.com/start/" target="_blank">Learn More <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ------------------  Portfolio ------------------------------>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Work</h1>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="app">App</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+
+            <!-- Work Grid -->
+            <div class="work-list">
+                <div class="work" data-category="web">
+                    <img src="./images/img-1.PNG" alt="work-img" />
+                    <div class="layer">
+                        <h3>CapitalBank</h3>
+                        <p>CapitalBank is a modern, user-friendly Django-based Bank Management System. </p>
+                        <a href="https://github.com/almasforhadi/CapitalBank" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="work" data-category="app">
+                    <img src="./images/img-2.PNG" alt="work-img" />
+                    <div class="layer">
+                        <h3>AutoGallery</h3>
+                        <p>Django based simple Car Management shop</p>
+                        <a href="https://github.com/almasforhadi/CarNova" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="work" data-category="web">
+                    <img src="./images/img-3.png" alt="work-img" />
+                    <div class="layer">
+                        <h3>MyLibrary</h3>
+                        <p>A Django-based Library Management System where users can browse and filter books by category,
+                            borrow and return them using account balance, and post reviews.</p>
+                        <a href="https://github.com/almasforhadi/Library_Management" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="work" data-category="design">
+                    <img src="./images/img-4.png" alt="work-img" />
+                    <div class="layer">
+                        <h3>Online Shopping</h3>
+                        <p>An Online Shopping Website built with HTML, CSS, and JavaScript,</p>
+                        <a href="https://github.com/almasforhadi/Online-Shopping" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!-- Modal Lightbox -->
+    <div id="lightbox">
+        <span id="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="preview" />
+    </div>
+
+
+
+    <!-- -------------------Contact-------------------->
+    <div id="contact">
+        <div class="container">
+            <h1 class="subtitle">Let’s Build Something Amazing</h1>
+
+            <div class="contact-wrapper">
+
+                <!-- Contact Form (Left) -->
+                <div class="contact-form card">
+                    <h2>Send Me a Message</h2>
+                    <form action="https://formspree.io/f/xwprevjw" method="POST">
+                        <div class="input-group">
+                            <input type="text" name="name" required>
+                            <label>Your Name</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="email" name="email" required>
+                            <label>Your Email</label>
+                        </div>
+
+                        <div class="input-group">
+                            <textarea name="message" rows="4" required></textarea>
+                            <label>Your Message</label>
+                        </div>
+
+                        <button class="submit-btn" type="submit">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info (Right) -->
+                <div class="contact-info card">
+                    <h2>Contact Information</h2>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:almasforhasi1999@gmail.com">almasforhasi1999@gmail.com</a>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="https://wa.me/8801852677251" target="_blank">+8801852677251</a>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Beraid,+Badda,+Dhaka-1212,+Bangladesh"
+                            target="_blank">
+                            Beraid, Badda, Dhaka-1212, Bangladesh
+                        </a>
+                    </div>
+
+                    <div class="social-icons">
+                        <a target="_blank" href="https://www.linkedin.com/in/almas-forhadi1999"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a target="_blank" href="https://github.com/almasforhadi/"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/mdalmasforhadi.forhadi"><i
+                                class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Back to Top -->
+    <button id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+    <!-- ------------- Footer ------------- -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- About -->
+            <div class="footer-col about">
+                <h3 class="logo">Almas <span>Forhadi</span></h3>
+                <p>
+                    Full-Stack Developer delivering premium digital solutions with modern design, scalable architecture,
+                    and seamless user experiences.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">My Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Connect -->
+            <div class="footer-col connect">
+                <h4>Connect</h4>
+                <div class="footer-socials">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:example@email.com"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+            <p>© 2025 Almas Forhadi. All rights reserved.</p>
+        </div>
+
+        <!-- Scroll to top -->
+        <!-- <button class="scroll-top"><i class="fa-solid fa-arrow-up"></i></button> -->
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
