@@ -177,6 +177,7 @@ nav .fa-xmark:hover {
   flex: 1;
   max-width: 600px;
   padding: 20px;
+  margin-left: 80px;
   animation: fadeInLeft 1s ease-in-out;
 }
 
@@ -201,8 +202,8 @@ nav .fa-xmark:hover {
 }
 
 .home-text h1 {
-  font-size: 52px;
-  line-height: 1.4;
+  font-size: 40px;
+  line-height: 1.1;
   margin: 20px 0;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -1508,57 +1509,43 @@ nav .fa-solid {
 /*------------------navbar-------------*/
 @media only screen and (max-width: 768px)
 { 
-  nav ul 
-  { 
-    flex-direction: column; background: rgb(0, 0, 0); position: fixed; top: 0; right: -220px; width: 200px; height: 100vh; padding-top: 60px; gap: 0; transition: right 0.5s ease; box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5); border-left: 2px solid #0066ff !important; z-index: 999; 
+  nav ul { 
+    flex-direction: column;
+    background: rgb(0, 0, 0);
+    position: fixed; top: 0;
+    right: -220px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 60px;
+    gap: 0;
+    transition: right 0.5s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    border-left: 2px solid #0066ff !important;
+    z-index: 999; 
   } 
-  nav ul li 
-  { 
-    display: block; margin: 25px; text-align: center; 
+  nav ul li {
+    display: block;
+    margin: 25px;
+    text-align: center; 
   } 
-  nav ul.open 
-  { 
+  nav ul.open { 
     right: 0; 
+  }
+  nav .fa-bars { 
+    display: block; 
+    position: absolute; 
+    top: 25px; 
+    right: 30px; 
   } 
-  nav .fa-bars 
-  { 
-    display: block;
-    position: absolute;
-    top: 18px;
-    right: 28px;
-    font-size: 34px; 
-    font-weight: 900; 
-    color: #00bfff; 
-    text-shadow: 0 0 12px rgba(0, 191, 255, 0.8);
-    cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease;
-    z-index: 1001;
-  }
-   nav .fa-bars:hover {
-    transform: scale(1.25);
-    color: #66b0ff;
-  }
-  nav .fa-xmark 
-  { 
-    display: block;
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    font-size: 32px;
-    font-weight: 900;
-    color: #00bfff;
-    text-shadow: 0 0 12px rgba(0, 191, 255, 0.8);
-    cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease; 
+  nav .fa-xmark { 
+    display: block; 
+    position: absolute; 
+    top: 25px; 
+    left: 25px; 
   } 
-  nav .fa-xmark:hover
-  {
-    transform: scale(1.25);
-    color: #66b0ff;
-  }
-  .download-cv-btn 
-  { 
-    font-size: 16px; margin: auto; 
+  .download-cv-btn { 
+    font-size: 16px; 
+    margin: auto; 
   } 
 }
 /*-----------------------home-------------------*/
@@ -1566,8 +1553,16 @@ nav .fa-solid {
   #home .container {
     padding: 60px 25px;
   }
+  .home-text
+  {
+    margin:auto;
+  }
   .home-text h1 {
     font-size: 42px;
+  }
+  .home-text h1 span 
+  {
+    white-space: pre-line;
   }
   .sub-text {
     font-size: 16px;
