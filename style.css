@@ -1507,13 +1507,25 @@ nav .fa-solid {
   display: none;
 }
 /*------------------navbar-------------*/
-@media only screen and (max-width: 768px)
-{ 
-  nav ul { 
+@media only screen and (max-width: 768px) {
+  nav {
+    justify-content: space-between; 
+    padding: 15px 25px;
+  }
+
+  /* Hide normal menu links and logo */
+  nav ul, .logo {
+    display: none;
+  }
+
+
+  nav ul#sidemenu {
+    display: flex;               
     flex-direction: column;
     background: rgb(0, 0, 0);
-    position: fixed; top: 0;
-    right: -220px;
+    position: fixed;
+    top: 0;
+    right: -220px;               /* hidden by default */
     width: 200px;
     height: 100vh;
     padding-top: 60px;
@@ -1521,33 +1533,53 @@ nav .fa-solid {
     transition: right 0.5s ease;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
     border-left: 2px solid #0066ff !important;
-    z-index: 999; 
-  } 
-  nav ul li {
-    display: block;
-    margin: 25px;
-    text-align: center; 
-  } 
-  nav ul.open { 
-    right: 0; 
+    z-index: 999;
   }
-  nav .fa-bars { 
-    display: block; 
-    position: absolute; 
-    top: 25px; 
-    right: 30px; 
-  } 
-  nav .fa-xmark { 
-    display: block; 
-    position: absolute; 
-    top: 25px; 
-    left: 25px; 
-  } 
-  .download-cv-btn { 
-    font-size: 16px; 
-    margin: auto; 
-  } 
+
+  nav ul#sidemenu.open {
+    right: 0;              
+  }
+
+  nav ul#sidemenu li {
+    margin: 25px;
+    text-align: center;
+  }
+  nav .fa-bars {
+    display: block;
+    font-size: 28px;
+    color: #00bfff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  nav .fa-bars:hover {
+    transform: scale(1.2);
+    color: #66b0ff;
+  }
+  nav .fa-xmark {
+    display: block;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 28px;
+    color: #00bfff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  nav .fa-xmark:hover {
+    transform: scale(1.2);
+    color: #66b0ff;
+  }
+  .download-cv-btn {
+    display: inline-flex;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0;
+  }
 }
+
+
 /*-----------------------home-------------------*/
 @media (max-width: 992px) {
   #home .container {
