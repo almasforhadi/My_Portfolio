@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Almas Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,7 +18,8 @@
     <!---------------------------header------------------------------->
     <div id="header">
         <nav>
-            <img src="images/logo.png" class="logo dark-mode-toggle" alt="Logo">
+            <!-- <img src="images/logo.png" class="logo dark-mode-toggle" alt="Logo"> -->
+            <span class="logo dark-mode-toggle" alt="Logo">Almas</span>
 
             <ul id="sidemenu">
                 <li><a href="#header">Home</a></li>
@@ -32,7 +33,7 @@
 
             <!-- Download CV Button -->
             <a href="files/resume.pdf" class="download-cv-btn" download>
-                <i class="fa-solid fa-download"></i> Download CV
+                <i class="fa-solid fa-download"></i> Resume
             </a>
 
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -45,15 +46,18 @@
             <div class="home-content">
                 <div class="home-text">
                     <div class="scrolling-text">
-                        <span>Python Developer | Web Developer</span>
+                        <span>Software Engineer — Backend (Python, Django) — DevOps</span>
                     </div>
                     <h1>
-                        👋 Hello, I'm <br><span>Almas Forhadi</span><br>
-                        I craft <b>modern, scalable & impactful</b> digital solutions.
+                        👋 Hello, I'm <br><span>Md Almas Forhadi</span><br>
+                        I build <b>scalable backend systems & cloud-ready applications</b>.
                     </h1>
+
                     <p class="sub-text">
-                        Specializing in <b>Django & Full-Stack Development</b> to deliver premium web experiences.
+                        Backend Engineer specializing in <b>Python, Django & REST APIs</b>,
+                        with experience in <b>Docker, CI/CD, Linux & AWS deployments</b>.
                     </p>
+
                     <button class="hire-btn" id="hireBtn">🚀 Hire Me</button>
                 </div>
                 <div class="home-img">
@@ -64,7 +68,7 @@
     </div>
 
 
-    <!-------- Modal Popup ---------->
+    <!--------------------------- Modal Popup ------------------------------->
     <div id="hireModal" class="modal" aria-hidden="true">
         <div class="modal-content">
             <button class="modal-close" id="closeModal">&times;</button>
@@ -73,7 +77,7 @@
                     front-end</b>. Let’s collaborate!</p>
 
             <div class="modal-actions">
-                <a href="files/resume.pdf" target="_blank" class="btn resume-btn">📄 View Resume</a>
+                <a href="files/Almas_Python_Django_Devops.pdf" target="_blank" class="btn resume-btn">📄 View Resume</a>
             </div>
 
 
@@ -103,7 +107,7 @@
     </div>
 
 
-    <!-------------------------About---------------------------------->
+    <!----------------------------About------------------------------------>
     <div id="about">
         <div class="container">
             <div class="row">
@@ -112,15 +116,18 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="subtitle">About Me</h1>
+
                     <p class="description">
-                        With a strong foundation in C and C++, I’ve developed deep expertise in Data Structures &
-                        Algorithms and transitioned into full-stack web development to build modern, responsive, and
-                        scalable applications.
-                        My core skill set includes HTML, CSS, Bootstrap, JavaScript, and Python (Django), with database
-                        proficiency in MySQL and PostgreSQL, complemented by tools like Git, GitHub, and Figma.
-                        Beyond development, I’m passionate about Mathematics and enjoy teaching and mentoring to share
-                        knowledge and inspire others.
+                        Backend-focused Software Engineer skilled in Python and Django, building scalable
+                        APIs and secure web systems using OOP and MVT architecture. Experienced with
+                        Django REST Framework, PostgreSQL, MySQL, Docker, CI/CD, Linux, and AWS basics,
+                        along with automation using Selenium.
+
+                        I bring strong problem-solving ability from solving 600+ programming challenges
+                        and apply performance-focused thinking to real-world development. Passionate about
+                        mentoring, teaching, and continuously improving as an engineer.
                     </p>
+
 
                     <div class="tab_titles">
                         <p class="tab_links active-link" onclick="openTab('skills', event)">Skills</p>
@@ -131,61 +138,132 @@
 
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Full Stack Development</span><br>End-to-end web solutions with modern frontend &
-                                backend technologies.</li>
-                            <li><span>Frontend Development</span><br>Responsive UI with HTML, CSS, JavaScript, React.js.
+
+                            <li>
+                                <span>Backend Engineering</span><br>
+                                Scalable application development using Python, Django & Django REST Framework,
+                                including secure JWT authentication and role-based access control.
                             </li>
-                            <li><span>Backend Development</span><br>Secure and scalable apps with Python (Django).</li>
-                            <li><span>Database</span><br>Efficient data management with MySQL, PostgreSQL.</li>
-                            <li><span>REST API</span><br>Designing and integrating RESTful APIs.</li>
+
+                            <li>
+                                <span>API Development</span><br>
+                                Designing and integrating production-ready RESTful APIs following clean
+                                architecture and performance optimization practices.
+                            </li>
+
+                            <li>
+                                <span>Frontend & UI</span><br>
+                                Responsive interfaces using HTML5, CSS3, JavaScript, React.js,
+                                Tailwind CSS and Bootstrap.
+                            </li>
+
+                            <li>
+                                <span>Databases</span><br>
+                                Data modeling, query optimization and management with PostgreSQL and MySQL.
+                            </li>
+
+                            <li>
+                                <span>DevOps & Cloud</span><br>
+                                Docker containerization, CI/CD pipelines, Nginx configuration,
+                                Linux environments and AWS deployment fundamentals.
+                            </li>
+
+                            <li>
+                                <span>Automation & Scraping</span><br>
+                                Workflow automation and dynamic data extraction using Selenium
+                                and WebDriver Manager.
+                            </li>
+
+                            <li>
+                                <span>Tools & Fundamentals</span><br>
+                                Git, GitHub, VS Code, Render, Ngrok with strong foundations in
+                                DSA, OS, DBMS, Networking and Computer Architecture.
+                            </li>
+
                         </ul>
                     </div>
+
 
                     <div class="tab-contents" id="experience">
                         <ul>
+
                             <li>
-                                <span>2025</span><br>
-                                Developed <b>CapitalBank (Bank Management System)</b> with Python, Django & PostgreSQL.
+                                <span>Backend Project</span><br>
+                                Developed <b>CapitalBank — Django Bank Management System</b><br>
+                                Engineered secure transaction workflows, optimized PostgreSQL queries
+                                (≈30% faster response), and implemented role-based access control
+                                with email notifications.
                             </li>
+
                             <li>
-                                <span>2025</span><br>
-                                Built a <b>Library Management System</b> using Django & SQLite3.
+                                <span>Backend Development</span><br>
+                                Built backend APIs for <b>Learning Management System (LMS)</b><br>
+                                Developed 20+ REST endpoints using Django REST Framework,
+                                integrated JWT authentication, and supported multi-role dashboards.
                             </li>
+
                             <li>
-                                <span>2024</span><br>
-                                Created a responsive <b>Car Website</b> for managing car listings.
+                                <span>Automation Engineering</span><br>
+                                Developed <b>Shwapno AutoScraper Automation Tool</b><br>
+                                Automated dynamic data extraction (200+ records/run),
+                                improved data accuracy via validation and headless execution.
                             </li>
+
                             <li>
-                                <span>2023 - Current</span><br>
-                                Active in Competitive Programming (HackerRank, Codeforces, LeetCode, GFG).<br>
-                                🏆 Intra-University Contest Winner <br>
-                                🎯 ICPC Asia Dhaka Regional 2025 Participant
+                                <span>Problem Solving</span><br>
+                                Competitive Programming & Problem Solving<br>
+                                Solved 600+ problems across online judges and participated in
+                                ICPC Asia Dhaka Regional Contest.
                             </li>
+
                             <li>
-                                <span>2021 - 2023</span><br>
-                                Tutored Higher Mathematics & ICT at the local level.
+                                <span>Leadership & Mentorship</span><br>
+                                Advisor — Programming Club<br>
+                                Mentored 25+ students in programming and software development,
+                                improving contest participation and problem-solving skills.
                             </li>
+
+                            <li>
+                                <span>Teaching Experience</span><br>
+                                Academic Tutor<br>
+                                Delivered instruction in Higher Mathematics & ICT,
+                                strengthening students’ technical and analytical foundations.
+                            </li>
+
                         </ul>
                     </div>
 
+
                     <div class="tab-contents" id="education">
                         <ul>
+
                             <li>
-                                <span>2022 - Present</span><br>
-                                B.Sc. in Computer Science & Engineering (CSE)<br>
-                                <b>International Standard University (ISU), Dhaka</b><br>
-                                Currently in Final Year.
+                                <span>Undergraduate Degree</span><br>
+                                B.Sc. in Computer Science & Engineering<br>
+                                <b>International Standard University, Dhaka</b><br>
+                                CGPA: 3.85 / 4.00
                             </li>
+
                             <li>
-                                <span>2023 - 2024</span><br>
-                                Software Development Course<br>
-                                <b>Phitron Platform</b>
+                                <span>Professional Training</span><br>
+                                Full-Stack Web Development (Python, Django & React)<br>
+                                <b>Ostad Training Program</b>
                             </li>
+
                             <li>
-                                <span>2025 - Present</span><br>
-                                Full-Stack Development (Python Django & React)<br>
-                                <b>Ostad Platform</b>
+                                <span>Professional Training</span><br>
+                                DevOps Training (Fundamentals to Advanced)<br>
+                                <b>Ostad Training Program</b>
                             </li>
+
+                            <li>
+                                <span>Academic Qualification</span><br>
+                                Higher Secondary Certificate (Science)<br>
+                                <b>AKM Rahmatullah College</b><br>
+                                GPA: 5.00
+                            </li>
+
+
                         </ul>
                     </div>
 
@@ -225,6 +303,12 @@
                         <div class="progress"><span style="width:90%"></span></div>
                     </div>
                     <div class="item frontend">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/tailwindcss.png" />
+                        <p>Tailwind CSS</p>
+                        <div class="progress"><span style="width:80%"></span></div>
+                    </div>
+
+                    <div class="item frontend">
                         <img class="logo-icon" src="https://img.icons8.com/color/96/javascript.png" />
                         <p>JavaScript</p>
                         <div class="progress"><span style="width:65%"></span></div>
@@ -252,6 +336,18 @@
                         <div class="progress"><span style="width:70%"></span></div>
                     </div>
                     <div class="item backend">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/api.png" />
+                        <p>DRF</p>
+                        <div class="progress"><span style="width:70%"></span></div>
+                    </div>
+
+                    <div class="item backend">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/security-checked.png" />
+                        <p>JWT Auth</p>
+                        <div class="progress"><span style="width:70%"></span></div>
+                    </div>
+
+                    <div class="item backend">
                         <img class="logo-icon" src="https://img.icons8.com/color/96/mysql.png" />
                         <p>MySQL</p>
                         <div class="progress"><span style="width:70%"></span></div>
@@ -274,6 +370,56 @@
                         <p>GitHub</p>
                         <div class="progress"><span style="width:75%"></span></div>
                     </div>
+                    <div class="item tools">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/docker.png" />
+                        <p>Docker</p>
+                        <div class="progress"><span style="width:70%"></span></div>
+                    </div>
+
+                    <div class="item tools">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/nginx.png" />
+                        <p>Nginx</p>
+                        <div class="progress"><span style="width:65%"></span></div>
+                    </div>
+
+                    <div class="item tools">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/amazon-web-services.png" />
+                        <p>AWS</p>
+                        <div class="progress"><span style="width:60%"></span></div>
+                    </div>
+
+                    <div class="item tools">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/linux.png" />
+                        <p>Linux</p>
+                        <div class="progress"><span style="width:70%"></span></div>
+                    </div>
+
+                    <div class="item tools">
+                        <img class="logo-icon"
+                            src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" />
+                        <p>Postman</p>
+                        <div class="progress"><span style="width:80%"></span></div>
+                    </div>
+
+                    <div class="item tools">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/network.png" />
+                        <p>Ngrok</p>
+                        <div class="progress"><span style="width:70%"></span></div>
+                    </div>
+
+
+                    <div class="item tools">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/programming.png" />
+                        <p>OOP</p>
+                        <div class="progress"><span style="width:85%"></span></div>
+                    </div>
+
+                    <div class="item tools">
+                        <img class="logo-icon" src="https://img.icons8.com/color/96/cloud.png" />
+                        <p>Render</p>
+                        <div class="progress"><span style="width:70%"></span></div>
+                    </div>
+
                     <div class="item tools">
                         <img class="logo-icon" src="https://img.icons8.com/color/96/figma.png" />
                         <p>Figma</p>
@@ -308,7 +454,7 @@
     </div>
 
 
-    <!-- ------------------  Services ------------------------------>
+    <!-----------------------------  Services ------------------------------>
     <div id="services">
         <div class="container">
             <h1 class="subtitle">My Services</h1>
@@ -316,16 +462,16 @@
             <div class="services-list">
                 <div class="service-card" data-animate>
                     <div class="icon-box">
-                        <i class="fa-solid fa-code"></i>
+                        <i class="fa-solid fa-server"></i>
                     </div>
-                    <h2>Web Design</h2>
+                    <h2>Backend Development</h2>
                     <p>
-                        Modern and responsive web design using HTML, CSS, JS & bootstrap frameworks to
-                        deliver smooth, beautiful websites.
+                        Scalable Python & Django backends with secure authentication, role-based access, and optimized
+                        databases.
                     </p>
-                    <a href="https://www.w3schools.com/html/" target="_blank">Learn More <i
-                            class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#">Learn More <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
+
 
                 <div class="service-card" data-animate>
                     <div class="icon-box">
@@ -333,12 +479,25 @@
                     </div>
                     <h2>REST API</h2>
                     <p>
-                        Robust and scalable REST APIs built with Django, enabling seamless communication between the
-                        backend and frontend, and allowing clients to securely create, read, update, and delete data.
+                        High-performance Django REST APIs with secure CRUD operations and smooth client integration.
                     </p>
                     <a href="https://www.django-rest-framework.org/" target="_blank">Learn More <i
                             class="fa-solid fa-arrow-right"></i></a>
                 </div>
+
+
+                <div class="service-card" data-animate>
+                    <div class="icon-box">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h2>Database Optimization</h2>
+                    <p>
+                        Efficient database design and query optimization with PostgreSQL & MySQL for scalable
+                        performance.
+                    </p>
+                    <a href="#">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
 
                 <div class="service-card" data-animate>
                     <div class="icon-box">
@@ -352,6 +511,33 @@
                     <a href="https://www.djangoproject.com/start/" target="_blank">Learn More <i
                             class="fa-solid fa-arrow-right"></i></a>
                 </div>
+                <div class="service-card" data-animate>
+                    <div class="icon-box">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <h2>Deployment & DevOps</h2>
+                    <p>
+                        Containerized deployments using Docker, CI/CD pipelines, Linux server setup,
+                        and cloud hosting with AWS to deliver stable and automated releases.
+                    </p>
+                    <a href="#">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+
+                <div class="service-card" data-animate>
+                    <div class="icon-box">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h2>Automation & Scraping</h2>
+                    <p>
+                        Automated data extraction and workflow automation using Selenium,
+                        handling dynamic content and ensuring reliable structured datasets.
+                    </p>
+                    <a href="#">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+
+
             </div>
         </div>
     </div>
@@ -368,11 +554,23 @@
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="web">Web</button>
                 <button class="filter-btn" data-filter="app">App</button>
-                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="other">Other</button>
             </div>
 
             <!-- Work Grid -->
             <div class="work-list">
+                <div class="work" data-category="web">
+                    <img src="./images/E-Shop.PNG" alt="work-img" />
+                    <div class="layer">
+                        <h3>E-shop</h3>
+                        <p>Built a full-stack E-Commerce web application using Django, featuring authentication, cart &
+                            order management, product ratings, and SSLCommerz payment integration.</p>
+                        <a href="https://github.com/almasforhadi/E-shop" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
                 <div class="work" data-category="web">
                     <img src="./images/img-1.PNG" alt="work-img" />
                     <div class="layer">
@@ -384,11 +582,37 @@
                     </div>
                 </div>
 
-                <div class="work" data-category="app">
+
+                <div class="work" data-category="other">
+                    <img src="./images/Auto_Scraper.jpeg" alt="work-img" />
+                    <div class="layer">
+                        <h3>Shwapno AutoScraper– Web Automation</h3>
+                        <p>Automates login and product search on Shwapno.com, then scrapes product details and saves
+                            them into a clean CSV file.</p>
+                        <a href="https://github.com/almasforhadi/Shwapno-AutoScraper" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="work" data-category="other">
+                    <img src="./images/qr_code.PNG" alt="work-img" />
+                    <div class="layer">
+                        <h3>QR_Code-Generator</h3>
+                        <p>A simple Python script that generates QR codes from text or URLs using the qrcode library.
+                            Just enter your text/link and a filename — the script creates and saves your QR code image
+                            instantly.</p>
+                        <a href="https://github.com/almasforhadi/QR_Code-Generator" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="work" data-category="web">
                     <img src="./images/img-2.PNG" alt="work-img" />
                     <div class="layer">
                         <h3>AutoGallery</h3>
-                        <p>Django based simple Car Management shop</p>
+                        <p>Django-based car sales platform with user authentication, car browsing, orders, comments, and
+                            profiles.</p>
                         <a href="https://github.com/almasforhadi/CarNova" target="_blank">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
@@ -407,7 +631,7 @@
                     </div>
                 </div>
 
-                <div class="work" data-category="design">
+                <div class="work" data-category="web">
                     <img src="./images/img-4.png" alt="work-img" />
                     <div class="layer">
                         <h3>Online Shopping</h3>

@@ -801,13 +801,15 @@ nav .fa-xmark:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-gap: 45px;
+
+   align-items: stretch; 
 }
 
 .service-card {
   background: linear-gradient(135deg, #0a0a0a, #1c1c2e);
   backdrop-filter: blur(20px);
   border-radius: 22px;
-  padding: 50px 30px 40px;
+  padding: 38px 26px 28px;
   text-align: center;
   transition: all 0.6s ease;
   position: relative;
@@ -815,7 +817,14 @@ nav .fa-xmark:hover {
   border: 2px solid transparent;
   background-clip: padding-box;
   opacity: 0;
-  transform: translateY(50px); 
+  transform: translateY(25px);
+
+  height: 100%;           /* ADD THIS */
+  display: flex;          /* ADD THIS */
+  flex-direction: column; /* ADD THIS */
+  justify-content: flex-start;
+  gap: 12px;
+  will-change: transform, opacity;
 }
 .service-card::before {
   content: "";
@@ -846,9 +855,10 @@ nav .fa-xmark:hover {
   }
 }
 .icon-box {
-  width: 90px;
-  height: 90px;
+  width: 72px;
+  height: 72px;
   margin: 0 auto 25px;
+  margin-bottom: 18px;
   border-radius: 50%;
   background: rgba(30,58,138,0.15);
   display: flex;
@@ -859,7 +869,7 @@ nav .fa-xmark:hover {
 }
 
 .icon-box i {
-  font-size: 42px;
+  font-size: 32px;
   color: #3b82f6;
   transition: transform 0.5s ease, text-shadow 0.5s ease;
 }
@@ -881,8 +891,8 @@ nav .fa-xmark:hover {
   font-size: 15px;
   color: #ddd;
   line-height: 1.7;
-  margin-bottom: 25px;
-  min-height: 70px;
+  margin-bottom: 18px;
+  min-height: 50px;
 }
 
 /* Button */
@@ -927,7 +937,7 @@ nav .fa-xmark:hover {
 .service-card.show {
   opacity: 1;
   transform: translateY(0);
-  transition: all 0.8s ease;
+  transition: all 0.45s ease;
 }
 
 @media (max-width: 768px) {
