@@ -135,7 +135,6 @@ nav .fa-xmark:hover {
   font-size: 15px;
   letter-spacing: 0.5px;
   box-shadow: 0 4px 20px rgba(0, 123, 255, 0.4);
-  transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -147,7 +146,6 @@ nav .fa-xmark:hover {
 
 .download-cv-btn:hover {
   background: linear-gradient(135deg, #0099ff, #0044cc);
-  transform: translateY(-2px);
   box-shadow: 0 6px 30px rgba(0, 123, 255, 0.6);
 }
 
@@ -221,20 +219,29 @@ nav .fa-xmark:hover {
   margin-bottom: 20px;
   line-height: 1.6;
 }
+
+.highlight-line {
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #00bfff;
+
+  border-left: 3px solid #00ccff;
+  padding-left: 10px;
+}
+
 .hire-btn {
   background: linear-gradient(135deg, #0066ff, #00ccff);
   color: #fff;
   font-size: 18px;
   font-weight: 600;
-  padding: 12px 28px;
+  padding: 8px 20px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  transition: all 0.3s;
 }
 
 .hire-btn:hover {
-  transform: scale(1.05);
   box-shadow: 0 0 35px rgba(0, 102, 255, 0.7), 0 0 60px rgba(0, 204, 255, 0.4);
 }
 .home-img {
@@ -268,6 +275,100 @@ nav .fa-xmark:hover {
   to { transform: translateX(0); opacity: 1; }
 }
 
+@media (max-width: 768px) {
+
+  nav {
+    padding: 12px 20px;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    background: #0a0a1e;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 60px 20px;
+    transition: right 0.3s ease;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  nav .fa-bars {
+    display: block;
+  }
+
+  nav .fa-xmark {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .download-cv-btn {
+    display: none; 
+  }
+
+  /* HOME */
+  #home .container {
+    margin-top: 80px;
+    padding: 40px 20px;
+  }
+
+  .home-content {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .home-text {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .home-text h1,
+  .home-text h2 {
+    font-size: 26px;
+  }
+
+  .sub-text {
+    font-size: 15px;
+  }
+
+  .highlight-line {
+    font-size: 14px;
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .home-img img {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .home-content {
+    gap: 20px;
+  }
+
+  .home-text {
+    margin-left: 20px;
+  }
+
+  .home-text h1,
+  .home-text h2 {
+    font-size: 32px;
+  }
+
+  .home-img img {
+    max-width: 320px;
+  }
+}
 /* --------------------------------Modal------------------------ */
 .modal {
   position: fixed;
@@ -527,7 +628,6 @@ nav .fa-xmark:hover {
   font-size: 17px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
   letter-spacing: 0.5px;
   box-shadow: 0 0 10px rgba(30, 144, 255, 0.2);
   user-select: none;
@@ -536,7 +636,6 @@ nav .fa-xmark:hover {
 .tab_links:hover {
   background: linear-gradient(135deg, #1e90ff, #00bfff);
   box-shadow: 0 0 25px rgba(30, 144, 255, 0.5);
-  transform: translateY(-2px);
 }
 
 .tab_links.active-link {
@@ -581,6 +680,16 @@ nav .fa-xmark:hover {
   color: #ffdd00;
   font-size: 18px;
   font-weight: 600;
+}
+.tab-contents a {
+  color: #7CFC00; 
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.tab-contents a:hover {
+  color: #32CD32; 
+  text-decoration: underline;
 }
 @keyframes slideInLeft {
   from { transform: translateX(-120%); opacity: 0; }
@@ -965,7 +1074,6 @@ nav .fa-xmark:hover {
 }
 
 /*------------------------------------portfolio---------------------------------------*/
-
 #portfolio .container {
   background: linear-gradient(135deg, #000000, #0a3d62) !important;
   border-radius: 24px;
@@ -1144,19 +1252,18 @@ nav .fa-xmark:hover {
 }
 
 /* ---------------------------------Contact------------------------------- */
-
 #contact .container {
   margin-top: 100px;
   background: linear-gradient(135deg, #000000, #0a3d62) !important;
   border-radius: 24px;
-  padding: 70px 40px;
+  padding: 65px 35px;
   box-shadow: 0 0 50px rgba(0, 123, 255, 0.25);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 #contact .subtitle {
-  font-size: 42px;
+  font-size: 38px;
   text-align: center;
   margin-bottom: 70px;
   font-weight: 800;
@@ -1178,11 +1285,9 @@ nav .fa-xmark:hover {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(15px);
-  transition: all 0.4s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
   box-shadow: 0 0 40px rgba(0, 132, 255, 0.35);
 }
 
@@ -1309,7 +1414,7 @@ nav .fa-xmark:hover {
   box-shadow: 0 0 20px rgba(0, 102, 255, 0.4), 0 0 35px rgba(0, 204, 255, 0.2);
 }
 
-/*-------- Success Popup ---------*/
+/*-------------------------- Success Popup ------------------------*/
 #successPopup {
   display: none;
   position: fixed;
